@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+  
+  body {
+    @apply bg-gray-900 text-white;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-gradient-to-r from-primary-600 to-secondary-600 hover:from-primary-700 hover:to-secondary-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-200 transform hover:scale-105 hover:shadow-lg;
+  }
+  
+  .btn-secondary {
+    @apply bg-gray-700 hover:bg-gray-600 text-white font-bold py-3 px-6 rounded-lg transition-all duration-200 transform hover:scale-105;
+  }
+  
+  .card {
+    @apply bg-gray-800 rounded-lg p-6 shadow-lg border border-gray-700;
+  }
+  
+  .battle-hud {
+    @apply bg-gray-800 rounded-lg p-4 border-2 border-gray-700;
+  }
+  
+  .health-bar {
+    @apply bg-gray-700 rounded-full h-4 overflow-hidden;
+  }
+  
+  .health-fill {
+    @apply h-full bg-gradient-to-r from-red-500 to-green-500 transition-all duration-300;
+  }
+}
